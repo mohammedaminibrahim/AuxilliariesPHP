@@ -43,14 +43,14 @@
             $mail->SMTPAuth = true;
     
             $mail->SMTPSecure = 'ssl'; 
-            $mail->Host = 'smtp.namibra.com';
-            $mail->Port = 465;  
-            $mail->Username = 'castright@namibra.com';
-            $mail->Password = 'Um9f985c2'; 
+            $mail->Host = '';
+            $mail->Port = 345; //change this port to yours 
+            $mail->Username = '';
+            $mail->Password = ''; 
     
             $mail->IsHTML(true);
             $mail->WordWrap = 50;
-            $mail->From = "castright@namibra.com";
+            $mail->From = "";
             $mail->FromName = $from_name;
             $mail->Sender = $from;
             $mail->AddReplyTo($from, $from_name);
