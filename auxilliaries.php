@@ -73,6 +73,16 @@
         }
         return false;
     }
+
+
+    // LOG USER OUT AFTER !% MINS OF IDLENESS
+	function automaticallyLogUserOut() {
+		// 900 = 15 * 60 
+		if ((time() - $_SESSION['last_login_timestamp']) > 900) {  
+            $_SESSION['message'] = "User are automatically Log out for staying Idle For 10mins";
+			
+        } 
+	}
    
     // GET USER IP ADDRESS
 	function getUserIPAddress() {  
